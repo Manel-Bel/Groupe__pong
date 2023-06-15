@@ -1,0 +1,13 @@
+Interface Graphique :
+
+	ce qu'on va possiblement utiliser :
+		-javafx (langage qui permet d'implementer des interface graphique)
+		
+		-FXML : 
+            FXML est un format de données textuelles, dérivé du format XML, qui permet de décrire une interface utilisateur pour des applications conçus avec JavaFX.
+
+		-Scene Builder :
+		    Scene Builder est un outil interactif de conception d'interface graphique pour JavaFX.
+
+	Playlist youtube pour comprendre JavaFX (pour la suite du projet) :
+	    https://youtu.be/02SFViTyX4A?list=PLlxQJeQRaKDSlg_sOFKqBHvFsox2ZVWbs

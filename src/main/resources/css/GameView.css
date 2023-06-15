@@ -1,0 +1,27 @@
+@font-face{
+	font-family: Pacifico;
+	src: url("../fonts/Pacifico-Regular.ttf");
+}
+
+@font-face{
+	font-family: ARCADECLASSIC;
+	src: url("../fonts/ARCADECLASSIC.ttf");
+}
+#text{
+    -fx-font-family: ARCADECLASSIC;
+	-fx-font-size: 30;
+}
+#button {
+	-fx-font-size: 20;
+	-fx-text-fill: #ffff;
+	-fx-border-color: #B8A508;
+	-fx-background-color: black;
+	-fx-font-family: ARCADECLASSIC;
+	-fx-max-width: 250;
+	-fx-max-height: 250;
+}
+
+#button:hover {
+	-fx-background-color: #40403F;
+	-fx-text-fill: #707006;
+}

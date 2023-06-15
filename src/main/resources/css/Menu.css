@@ -1,0 +1,44 @@
+@font-face{
+	font-family: Pacifico;
+	src: url("../fonts/Pacifico-Regular.ttf");
+}
+
+@font-face{
+	font-family: ARCADECLASSIC;
+	src: url("../fonts/ARCADECLASSIC.ttf");
+}
+
+.root {
+	-fx-padding: 25;
+	-fx-background-color: #1B0144;
+	-fx-alignment: top-center;
+	/*-fx-background-color: linear-gradient(to top,#680670,#1B0144 60%);*/
+}
+
+.button {
+	-fx-font-size: 20;
+	-fx-text-fill: #B8A508;
+	-fx-border-color: #B8A508;
+	-fx-background-color: black;
+	-fx-font-family: ARCADECLASSIC;
+	-fx-max-width: 200;
+	-fx-max-height: 200;
+}
+
+.button:hover {
+	-fx-background-color: #40403F;
+	-fx-text-fill: #707006;
+}
+
+.label {
+	-fx-font-size: 50;
+}
+
+#titrelabel{
+	-fx-font-size: 100;
+	-fx-font-family: ARCADECLASSIC;
+	-fx-text-fill: #B8A508;
+}
+
+
+

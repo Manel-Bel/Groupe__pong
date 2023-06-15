@@ -1,0 +1,9 @@
+/build
+.classpath
+.gradle/
+.metadata/
+.project
+build/
+cmd_git.docx
+maquette.png
+/bin/

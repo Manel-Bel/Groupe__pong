@@ -1,0 +1,71 @@
+@font-face{
+	font-family: Pacifico;
+	src: url("../fonts/Pacifico-Regular.ttf");
+}
+
+@font-face{
+	font-family: ARCADECLASSIC;
+	src: url("../fonts/ARCADECLASSIC.ttf");
+}
+
+.root {
+	-fx-background-color: #1B0144;
+}
+#rootI {
+	-fx-background-color: #1B0144;
+    /* -fx-padding: 0, 0,50,0; */
+}
+#btnRetour{
+    -fx-max-height:25;
+    -fx-max-width:25;
+    -fx-background-color: white;
+}
+.button {
+	-fx-font-size: 20;
+	-fx-text-fill: #B8A508;
+	-fx-border-color: #B8A508;
+	-fx-font-family: ARCADECLASSIC;
+    -fx-pref-height:50;
+    -fx-pref-width:250;
+}
+.button:active{
+	-fx-text-fill: red;
+}
+
+.button:hover {
+	-fx-background-color: #40403F;
+	-fx-text-fill: #707006;
+}
+#buttonImage{
+	-fx-background-color: black;
+    -fx-max-width: 250;
+	-fx-max-height: 160;
+    -fx-min-width: 250;
+	-fx-max-height: 160;
+}
+#buttonImage:hover{
+	-fx-background-color: #40403F;
+}
+#buttonImage:active{
+	-fx-text-fill: rgb(57, 159, 48);
+}
+.label {
+	-fx-font-size: 30;
+    -fx-font-family: ARCADECLASSIC;
+	-fx-text-fill: #B8A508;
+}
+#comboBox{
+	-fx-pref-width:250;
+	-fx-pref-height: 50;
+	-fx-font-size: 24;
+    -fx-font-family: ARCADECLASSIC;
+	-fx-text-fill: #B8A508;
+	-fx-border-color: #B8A508;
+}
+
+
+
+
+
+
+

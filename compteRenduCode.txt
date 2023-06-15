@@ -1,0 +1,57 @@
+Il y a 4 fichiers .java différents, répartis dans 2 dossiers différents :
+
+- dossier "model" :
+
+
+RacketController.java
+
+C'est le fichier le plus court, il ne contient qu'une interface dans laquelle il y a 3 états différents possibles pour la raquette du joueur (GOING_UP, IDLE et GOING_DOWN) et un getter pour obtenir l'état courant.
+
+
+Court.java
+
+Le fichier contient une classe Court, dans laquelle il y a plusieurs attributs :
+final playerA, playerB représentent les deux joueurs et sont de type RacketController
+tous les autres attributs sont de type double
+final width, heith respectivement la largeur et hauteur du terrain
+final racketSpeed, racketSize, ballRadius respectivement la vitesse des raquettes, la taille des raquettes et la taille de la balle
+racketA, racketB les positions des raquettes
+ballX, ballY les coordonnées de la balle sur le terrain
+ballSpeedX, ballSpeedY la direction dans laquelle va la balle
+
+On a un constructeur qui prend en argument 2 racketController pour playerA et playerB et 2 double pour width et heith. Il initialise ces 4 attributs et appelle la fonction reset().
+Il y a des getters pour : width, heith, racketSize, racketA, racketB, ballX, ballY et ballRadius.
+
+Enfin on a 3 fonctions :
+public void update (double deltaT) -> cette fonction utilise deux switch case pour faire bouger les raquettes en fonction de leur état. Elle appelle la fonction reset() lorsque updateBall(deltaT) renvoit true.
+
+private boolean updateBall(double deltaT) -> cette fonction regarde quel sera la prochaine position de la balle, la fait avancer si il n'y a pas d'obstacle devant elle puis renvoit false. Si jamais il y a un obstacle, la balle change de direction en conséquece, et si la balle atteind une des extrémités du terrain (et donc que l'un des deux joueurs perd), la fonction renvoit true.
+
+public void reset() -> cette fonction associe certaines valeurs aux attributs racketA, racketB, ballSpeedX, ballSpeedY, ballX et ballY afin de tout remettre en place pour lancer une nouvelle partie.
+
+
+
+- dossier "gui" :
+
+
+GameView.java
+
+Le fichier contient une classe GameView avec plusieurs attributs :
+tous les attributs sont final
+Court court le terrain de jeu et ce qu'il y a dessus
+Pane gameRoot le noeud principal du jeu
+double scale l'échelle des distances dans le jeu
+double xMargin la taille de la fenêtre du jeu (je crois)
+double racketThickness l'épaisseur des raquettes
+Rectangle racketA, racketB les sprites des raquettes
+Circle ball le sprite de la balle
+
+On a ensuite un contructeur qui prend 3 arguments : un Court court, un Pane root et un double scale pour les attributs court, gameRoot et scale. Le constructeur initialise aussi les attributs racketA, racketB et ball et les ajoute au jeu.
+
+Enfin on a une fonction public void animate() -> cette fonction a une fonction imbriqué public void handle(long now). Cette fonction et la fonction imbriquée permettent d'animer les sprites des raquettes et de la balle. (cette fonction fait seulement bouger les sprites et non leur hitbox)
+
+
+App.java
+
+C'est le fichier principal du projet. Il ne contient qu'une seule fonction :
+public void start(Stage primaryStage) -> cette fonction appelle les fonctions et constructeurs des autres fichiers afin de lancer le jeu et de créer tout le nécessaire. Elle contient également une classe Player qui est liée à l'interface RacketController, et 2 switch case : le premier permet de faire bouger les raquettes lorsque que le joueur appuie sur certaines touches, et le deuxième permet d'arrêter les raquettes quand le joueur arrête d'appuyer sur ces touches.
